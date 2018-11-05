@@ -15,4 +15,7 @@ public class NinetyNineBottlesShould {
     Bottles bottles = new Bottles();
     assertThat(bottles.verse(99)).isEqualTo(expected);
   }
+
+  private class Bottles {
+  }
 }
