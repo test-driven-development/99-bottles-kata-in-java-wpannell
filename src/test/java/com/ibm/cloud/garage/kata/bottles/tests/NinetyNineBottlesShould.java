@@ -17,5 +17,8 @@ public class NinetyNineBottlesShould {
   }
 
   private class Bottles {
+    public String verse(int i) {
+      return null;
+    }
   }
 }
