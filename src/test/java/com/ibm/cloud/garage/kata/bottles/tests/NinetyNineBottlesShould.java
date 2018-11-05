@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class NinetyNineBottlesShould {
   @Test
-  public void performVerse99() throws Exception {
+  public void performVerse99() {
     String expected =
         "99 bottles of beer on the wall, " +
         "99 bottles of beer.\n" +
@@ -17,7 +17,7 @@ public class NinetyNineBottlesShould {
   }
 
   @Test
-  public void performVerse03() throws Exception {
+  public void performVerse03() {
     String expected =
         "3 bottles of beer on the wall, " +
         "3 bottles of beer.\n" +
