@@ -17,7 +17,7 @@ public class NinetyNineBottlesShould {
   }
 
   private class Bottles {
-    String verse(int i) {
+    String verse(int numberOfBottlesOnWall) {
       return
           "99 bottles of beer on the wall, " +
           "99 bottles of beer.\n" +
