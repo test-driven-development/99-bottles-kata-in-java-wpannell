@@ -18,7 +18,11 @@ public class NinetyNineBottlesShould {
 
   private class Bottles {
     public String verse(int i) {
-      return null;
+      return
+          "9 bottles of beer on the wall, " +
+          "99 bottles of beer.\n" +
+          "Take one down and pass it around, " +
+          "98 bottles of beer on the wall.\n";
     }
   }
 }
