@@ -31,10 +31,10 @@ public class NinetyNineBottlesShould {
   private class Bottles {
     String verse(int numberOfBottlesOnWall) {
       return
-          "99 bottles of beer on the wall, " +
-          "99 bottles of beer.\n" +
+          numberOfBottlesOnWall + " bottles of beer on the wall, " +
+          numberOfBottlesOnWall + " bottles of beer.\n" +
           "Take one down and pass it around, " +
-          "98 bottles of beer on the wall.\n";
+          (numberOfBottlesOnWall - 1) + " bottles of beer on the wall.\n";
     }
   }
 }
