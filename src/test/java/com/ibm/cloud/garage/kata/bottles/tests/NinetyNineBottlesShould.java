@@ -28,6 +28,18 @@ public class NinetyNineBottlesShould {
     assertThat(bottles.verse(3)).isEqualTo(expected);
   }
 
+  @Test
+  public void verse02() {
+    String expected =
+        "2 bottles of beer on the wall, " +
+        "2 bottles of beer.\n" +
+        "Take one down and pass it around, " +
+        "1 bottle of beer on the wall.\n";
+
+    Bottles bottles = new Bottles();
+    assertThat(bottles.verse(2)).isEqualTo(expected);
+  }
+
   private class Bottles {
     String verse(int numberOfBottles) {
       return
