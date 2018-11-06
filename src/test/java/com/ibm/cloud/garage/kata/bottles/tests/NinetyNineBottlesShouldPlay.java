@@ -3,7 +3,7 @@ package com.ibm.cloud.garage.kata.bottles.tests;
 import org.junit.Test;
 import static org.assertj.core.api.Assertions.*;
 
-public class NinetyNineBottlesShould {
+public class NinetyNineBottlesShouldPlay {
   @Test
   public void verse99() {
     String expected =
