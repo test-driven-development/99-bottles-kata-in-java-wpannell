@@ -1,9 +1,18 @@
 package com.ibm.cloud.garage.kata.bottles.tests;
 
+import org.junit.Before;
 import org.junit.Test;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class NinetyNineBottlesShouldPlay {
+  private Bottles bottles = null;
+
+  @Before
+  public void setUp() throws Exception {
+    this.bottles = new Bottles();
+  }
+
   @Test
   public void verse99() {
     String expected =
@@ -12,7 +21,6 @@ public class NinetyNineBottlesShouldPlay {
         "Take one down and pass it around, " +
         "98 bottles of beer on the wall.\n";
 
-    Bottles bottles = new Bottles();
     assertThat(bottles.verse(99)).isEqualTo(expected);
   }
 
@@ -24,7 +32,6 @@ public class NinetyNineBottlesShouldPlay {
         "Take one down and pass it around, " +
         "2 bottles of beer on the wall.\n";
 
-    Bottles bottles = new Bottles();
     assertThat(bottles.verse(3)).isEqualTo(expected);
   }
 
@@ -36,7 +43,6 @@ public class NinetyNineBottlesShouldPlay {
         "Take one down and pass it around, " +
         "1 bottle of beer on the wall.\n";
 
-    Bottles bottles = new Bottles();
     assertThat(bottles.verse(2)).isEqualTo(expected);
   }
 
@@ -48,7 +54,6 @@ public class NinetyNineBottlesShouldPlay {
         "Take it down and pass it around, " +
         "no more bottles of beer on the wall.\n";
 
-    Bottles bottles = new Bottles();
     assertThat(bottles.verse(1)).isEqualTo(expected);
   }
 
@@ -60,7 +65,6 @@ public class NinetyNineBottlesShouldPlay {
         "Go to the store and buy some more, " +
         "99 bottles of beer on the wall.\n";
 
-    Bottles bottles = new Bottles();
     assertThat(bottles.verse(0)).isEqualTo(expected);
   }
 
