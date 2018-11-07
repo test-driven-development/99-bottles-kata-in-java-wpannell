@@ -68,6 +68,22 @@ public class NinetyNineBottlesShouldPlay {
     assertThat(bottles.verse(0)).isEqualTo(expected);
   }
 
+  @Test
+  public void verses99to98() {
+    String expected =
+        "99 bottles of beer on the wall, " +
+        "99 bottles of beer.\n" +
+        "Take one down and pass it around, " +
+        "98 bottles of beer on the wall.\n" +
+        "\n" +
+        "98 bottles of beer on the wall, " +
+        "98 bottles of beer.\n" +
+        "Take one down and pass it around, " +
+        "97 bottles of beer on the wall.\n";
+
+    assertThat(bottles.verses(99, 98)).isEqualTo(expected);
+  }
+
   private class Bottles {
     String verse(int numberOfBottles) {
       if(numberOfBottles == 0)
