@@ -66,6 +66,13 @@ public class NinetyNineBottlesShouldPlay {
 
   private class Bottles {
     String verse(int numberOfBottles) {
+      if(numberOfBottles == 0)
+        return
+            ("No more") + " bottles of beer on the wall, " +
+            ("no more") + " bottles of beer.\n" +
+            "Go to the store and buy some more, " +
+            (99) + " bottles of beer on the wall.\n";
+
       if(numberOfBottles == 1)
         return
             numberOfBottles + " bottle of beer on the wall, " +
