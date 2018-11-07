@@ -113,5 +113,9 @@ public class NinetyNineBottlesShouldPlay {
           "Take one down and pass it around, " +
           (numberOfBottles - 1) + " bottles of beer on the wall.\n";
     }
+
+    public String verses(int i, int i1) {
+      return null;
+    }
   }
 }
