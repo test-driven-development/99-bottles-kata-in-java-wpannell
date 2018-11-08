@@ -146,6 +146,8 @@ public class NinetyNineBottlesShouldPlay {
       .collect(Collectors.joining("\n"));
     }
 
+    String song() { return verses(99, 0); }
+
     private IntUnaryOperator countDownFromTo(int from, int to) {
       return j -> to - j + from;
     }
