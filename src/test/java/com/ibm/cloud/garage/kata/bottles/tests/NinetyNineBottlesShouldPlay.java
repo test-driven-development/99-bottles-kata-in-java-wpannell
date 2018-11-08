@@ -118,11 +118,11 @@ public class NinetyNineBottlesShouldPlay {
           (numberOfBottles - 1) + " bottles of beer on the wall.\n";
     }
 
-    String verses(int i, int i1) {
+    String verses(int n, int m) {
       List<String> song = new ArrayList<>();
 
-      for(int j = i; j >= i1 ; j--)
-        song.add(verse(j));
+      for(int i = n; i >= m ; i--)
+        song.add(verse(i));
       
       return song.stream().collect(Collectors.joining("\n"));
     }
