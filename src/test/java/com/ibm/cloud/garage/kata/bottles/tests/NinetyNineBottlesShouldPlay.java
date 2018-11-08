@@ -13,7 +13,7 @@ public class NinetyNineBottlesShouldPlay {
   private Bottles bottles = null;
 
   @Before
-  public void setUp() throws Exception {
+  public void setUp() {
     this.bottles = new Bottles();
   }
 
