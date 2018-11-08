@@ -3,6 +3,10 @@ package com.ibm.cloud.garage.kata.bottles.tests;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class NinetyNineBottlesShouldPlay {
@@ -115,7 +119,12 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     public String verses(int i, int i1) {
-      return null;
+      List<String> song = new ArrayList<>();
+
+      for(int j = i; j >= i1 ; j--)
+        song.add(verse(j));
+      
+      return song.stream().collect(Collectors.joining("\n"));
     }
   }
 }
