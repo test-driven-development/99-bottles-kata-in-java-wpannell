@@ -3,6 +3,7 @@ package com.ibm.cloud.garage.kata.bottles.tests;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.function.IntUnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -119,9 +120,13 @@ public class NinetyNineBottlesShouldPlay {
 
     String verses(int n, int m) {
       return IntStream.rangeClosed(m, n)
-      .map(j -> m - j + n)
-      .mapToObj(numberOfBottles -> this.verse(numberOfBottles))
+      .map(countDownFromTo(n, m))
+      .mapToObj(this::verse)
       .collect(Collectors.joining("\n"));
+    }
+
+    private IntUnaryOperator countDownFromTo(int from, int to) {
+      return j -> to - j + from;
     }
   }
 }
