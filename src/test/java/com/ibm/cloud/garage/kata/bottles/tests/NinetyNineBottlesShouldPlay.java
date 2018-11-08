@@ -118,7 +118,7 @@ public class NinetyNineBottlesShouldPlay {
           (numberOfBottles - 1) + " bottles of beer on the wall.\n";
     }
 
-    public String verses(int i, int i1) {
+    String verses(int i, int i1) {
       List<String> song = new ArrayList<>();
 
       for(int j = i; j >= i1 ; j--)
