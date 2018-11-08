@@ -139,9 +139,9 @@ public class NinetyNineBottlesShouldPlay {
           (numberOfBottles - 1) + " bottles of beer on the wall.\n";
     }
 
-    String verses(int n, int m) {
-      return IntStream.rangeClosed(m, n)
-      .map(countDownFromTo(n, m))
+    String verses(int start, int end) {
+      return IntStream.rangeClosed(end, start)
+      .map(countDownFromTo(start, end))
       .mapToObj(this::verse)
       .collect(Collectors.joining("\n"));
     }
