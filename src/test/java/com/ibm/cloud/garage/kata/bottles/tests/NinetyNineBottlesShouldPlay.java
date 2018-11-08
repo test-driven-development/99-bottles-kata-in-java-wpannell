@@ -3,9 +3,8 @@ package com.ibm.cloud.garage.kata.bottles.tests;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -119,12 +118,10 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     String verses(int n, int m) {
-      List<String> song = new ArrayList<>();
-
-      for(int i = n; i >= m ; i--)
-        song.add(verse(i));
-      
-      return song.stream().collect(Collectors.joining("\n"));
+      return IntStream.rangeClosed(m, n)
+      .map(j -> m - j + n)
+      .mapToObj(numberOfBottles -> this.verse(numberOfBottles))
+      .collect(Collectors.joining("\n"));
     }
   }
 }
