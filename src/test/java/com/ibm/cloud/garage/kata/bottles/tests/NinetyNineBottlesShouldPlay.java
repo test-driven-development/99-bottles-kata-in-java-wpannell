@@ -129,10 +129,6 @@ public class NinetyNineBottlesShouldPlay {
       return ((numberOfBottles % -100) + 99) % 100;
     }
 
-    private int predecessor() {
-      return predecessor(0);
-    }
-
     private String action() {
       return action(0);
     }
