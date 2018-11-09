@@ -137,6 +137,7 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     private String pronoun(int numberOfBottles) {
+      if(numberOfBottles == 1) return "it";
       return "it";
     }
 
