@@ -125,8 +125,12 @@ public class NinetyNineBottlesShouldPlay {
           quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
     }
 
-    private int predecessor() {
+    private int predecessor(int numberOfBottles) {
       return 99;
+    }
+
+    private int predecessor() {
+      return predecessor(99);
     }
 
     private String action() {
