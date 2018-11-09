@@ -113,16 +113,20 @@ public class NinetyNineBottlesShouldPlay {
     String verse(int numberOfBottles) {
       if(numberOfBottles == 0)
         return
-            ("No more") + " bottles of beer on the wall, " +
+            capitalize(quantity(numberOfBottles))  + " bottles of beer on the wall, " +
             ("no more") + " bottles of beer.\n" +
             "Go to the store and buy some more, " +
             (99) + " bottles of beer on the wall.\n";
 
       return
-          numberOfBottles + " " + container(numberOfBottles) + " of beer on the wall, " +
+          capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
           numberOfBottles + " " + container(numberOfBottles) + " of beer.\n" +
           "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
           quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
+    }
+
+    private String capitalize(String word) {
+      return word.toUpperCase().charAt(0) + word.substring(1);
     }
 
     private String quantity(int numberOfBottles) {
