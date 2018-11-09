@@ -129,7 +129,7 @@ public class NinetyNineBottlesShouldPlay {
           numberOfBottles + " bottles of beer on the wall, " +
           numberOfBottles + " bottles of beer.\n" +
           "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
-          (numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
+          quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
     }
 
     private String quantity() {
@@ -138,7 +138,7 @@ public class NinetyNineBottlesShouldPlay {
 
     private String quantity(int numberOfBottles) {
       if(numberOfBottles == 0) return "no more";
-      return "no more";
+      return String.valueOf(numberOfBottles);
     }
 
     private String pronoun(int numberOfBottles) {
