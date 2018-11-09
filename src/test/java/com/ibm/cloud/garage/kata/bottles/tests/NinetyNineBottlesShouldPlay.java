@@ -133,6 +133,10 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     private String quantity() {
+      return quantity(0);
+    }
+
+    private String quantity(int numberOfBottles) {
       return "no more";
     }
 
