@@ -144,6 +144,7 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     private String container(int numberOfBottles) {
+      if(numberOfBottles == 1) return "bottle";
       return "bottles";
     }
 
