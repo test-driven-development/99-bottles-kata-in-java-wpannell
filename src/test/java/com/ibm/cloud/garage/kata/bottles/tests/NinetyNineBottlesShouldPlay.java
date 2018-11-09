@@ -123,13 +123,17 @@ public class NinetyNineBottlesShouldPlay {
             numberOfBottles + " bottle of beer on the wall, " +
             numberOfBottles + " bottle of beer.\n" +
             "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
-            ("no more") + " bottles of beer on the wall.\n";
+            quantity() + " bottles of beer on the wall.\n";
 
       return
           numberOfBottles + " bottles of beer on the wall, " +
           numberOfBottles + " bottles of beer.\n" +
           "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
           (numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
+    }
+
+    private String quantity() {
+      return "no more";
     }
 
     private String pronoun(int numberOfBottles) {
