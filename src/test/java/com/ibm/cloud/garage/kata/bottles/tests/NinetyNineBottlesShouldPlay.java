@@ -126,11 +126,11 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     private int predecessor(int numberOfBottles) {
-      return 99;
+      return ((numberOfBottles % -100) + 99) % 100;
     }
 
     private int predecessor() {
-      return predecessor(99);
+      return predecessor(0);
     }
 
     private String action() {
