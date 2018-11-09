@@ -126,6 +126,10 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     private String action() {
+      return action(0);
+    }
+
+    private String action(int numberOfBottles) {
       return "Go to the store and buy some more";
     }
 
