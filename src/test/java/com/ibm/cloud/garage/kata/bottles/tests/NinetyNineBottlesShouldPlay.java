@@ -113,7 +113,7 @@ public class NinetyNineBottlesShouldPlay {
     String verse(int numberOfBottles) {
       if(numberOfBottles == 0)
         return
-            capitalize(quantity(numberOfBottles))  + " bottles of beer on the wall, " +
+            capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
             ("no more") + " bottles of beer.\n" +
             "Go to the store and buy some more, " +
             (99) + " bottles of beer on the wall.\n";
