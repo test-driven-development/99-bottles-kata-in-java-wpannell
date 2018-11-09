@@ -121,7 +121,7 @@ public class NinetyNineBottlesShouldPlay {
       return
           capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
           quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
-          "Take " + pronoun(numberOfBottles) + " down and pass it around" + ", " +
+          action(numberOfBottles) + ", " +
           quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
     }
 
@@ -131,7 +131,7 @@ public class NinetyNineBottlesShouldPlay {
 
     private String action(int numberOfBottles) {
       if(numberOfBottles == 0) return "Go to the store and buy some more";
-      return "Go to the store and buy some more";
+      return "Take " + pronoun(numberOfBottles) + " down and pass it around";
     }
 
     private String capitalize(String word) {
