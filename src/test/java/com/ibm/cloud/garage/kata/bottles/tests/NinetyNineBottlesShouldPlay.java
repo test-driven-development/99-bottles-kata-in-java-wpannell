@@ -121,7 +121,7 @@ public class NinetyNineBottlesShouldPlay {
       return
           capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
           quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
-          "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
+          "Take " + pronoun(numberOfBottles) + " down and pass it around" + ", " +
           quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
     }
 
