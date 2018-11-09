@@ -123,7 +123,7 @@ public class NinetyNineBottlesShouldPlay {
             numberOfBottles + " bottle of beer on the wall, " +
             numberOfBottles + " bottle of beer.\n" +
             "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
-            quantity() + " bottles of beer on the wall.\n";
+            quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
 
       return
           numberOfBottles + " bottles of beer on the wall, " +
