@@ -139,7 +139,13 @@ public class NinetyNineBottlesShouldPlay {
           (numberOfBottles - 1) + " " + container() + " of beer on the wall.\n";
     }
 
-    private String container() { return "bottles"; }
+    private String container() {
+      return container(9999);
+    }
+
+    private String container(int numberOfBottles) {
+      return "bottles";
+    }
 
     String verses(int start, int end) {
       return IntStream.rangeClosed(end, start)
