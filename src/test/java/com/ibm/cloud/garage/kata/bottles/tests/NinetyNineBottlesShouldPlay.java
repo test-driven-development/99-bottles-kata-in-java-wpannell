@@ -132,10 +132,6 @@ public class NinetyNineBottlesShouldPlay {
           quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
     }
 
-    private String quantity() {
-      return quantity(0);
-    }
-
     private String quantity(int numberOfBottles) {
       if(numberOfBottles == 0) return "no more";
       return String.valueOf(numberOfBottles);
