@@ -130,6 +130,7 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     private String action(int numberOfBottles) {
+      if(numberOfBottles == 0) return "Go to the store and buy some more";
       return "Go to the store and buy some more";
     }
 
