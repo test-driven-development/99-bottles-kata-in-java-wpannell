@@ -132,10 +132,6 @@ public class NinetyNineBottlesShouldPlay {
           (numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
     }
 
-    private String pronoun() {
-      return pronoun(1);
-    }
-
     private String pronoun(int numberOfBottles) {
       if(numberOfBottles == 1) return "it";
       return "one";
