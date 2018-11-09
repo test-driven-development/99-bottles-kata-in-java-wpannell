@@ -128,7 +128,7 @@ public class NinetyNineBottlesShouldPlay {
       return
           numberOfBottles + " bottles of beer on the wall, " +
           numberOfBottles + " bottles of beer.\n" +
-          "Take one down and pass it around, " +
+          "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
           (numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
     }
 
@@ -138,7 +138,7 @@ public class NinetyNineBottlesShouldPlay {
 
     private String pronoun(int numberOfBottles) {
       if(numberOfBottles == 1) return "it";
-      return "it";
+      return "one";
     }
 
     private String container(int numberOfBottles) {
