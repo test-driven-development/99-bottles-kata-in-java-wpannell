@@ -120,22 +120,14 @@ public class NinetyNineBottlesShouldPlay {
 
       if(numberOfBottles == 1)
         return
-            numberOfBottles + " " +
-                container(numberOfBottles) +
-                " of beer on the wall, " +
-            numberOfBottles + " " +
-                container(numberOfBottles) +
-                " of beer.\n" +
+            numberOfBottles + " " + container(numberOfBottles) + " of beer on the wall, " +
+            numberOfBottles + " " + container(numberOfBottles) + " of beer.\n" +
             "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
             quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
 
       return
-          numberOfBottles + " " +
-              container(numberOfBottles) +
-              " of beer on the wall, " +
-          numberOfBottles + " " +
-              container(numberOfBottles) +
-              " of beer.\n" +
+          numberOfBottles + " " + container(numberOfBottles) + " of beer on the wall, " +
+          numberOfBottles + " " + container(numberOfBottles) + " of beer.\n" +
           "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
           quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
     }
