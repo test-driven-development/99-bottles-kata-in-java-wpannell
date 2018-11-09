@@ -125,22 +125,11 @@ public class NinetyNineBottlesShouldPlay {
             "Take it down and pass it around, " +
             ("no more") + " bottles of beer on the wall.\n";
 
-      if(numberOfBottles == 2)
-        return
-            numberOfBottles + " bottles of beer on the wall, " +
-            numberOfBottles + " bottles of beer.\n" +
-            "Take one down and pass it around, " +
-            (numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
-
       return
           numberOfBottles + " bottles of beer on the wall, " +
           numberOfBottles + " bottles of beer.\n" +
           "Take one down and pass it around, " +
           (numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
-    }
-
-    private String container() {
-      return container(9999);
     }
 
     private String container(int numberOfBottles) {
