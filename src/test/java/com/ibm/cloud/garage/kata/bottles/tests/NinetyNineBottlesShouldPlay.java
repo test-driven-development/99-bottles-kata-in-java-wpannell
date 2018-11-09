@@ -137,6 +137,7 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     private String quantity(int numberOfBottles) {
+      if(numberOfBottles == 0) return "no more";
       return "no more";
     }
 
