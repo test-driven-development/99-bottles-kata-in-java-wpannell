@@ -122,7 +122,7 @@ public class NinetyNineBottlesShouldPlay {
         return
             numberOfBottles + " bottle of beer on the wall, " +
             numberOfBottles + " bottle of beer.\n" +
-            "Take " + pronoun() + " down and pass it around, " +
+            "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
             ("no more") + " bottles of beer on the wall.\n";
 
       return
