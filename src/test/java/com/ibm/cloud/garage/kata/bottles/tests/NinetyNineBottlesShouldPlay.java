@@ -133,6 +133,10 @@ public class NinetyNineBottlesShouldPlay {
     }
 
     private String pronoun() {
+      return pronoun(1);
+    }
+
+    private String pronoun(int numberOfBottles) {
       return "it";
     }
 
