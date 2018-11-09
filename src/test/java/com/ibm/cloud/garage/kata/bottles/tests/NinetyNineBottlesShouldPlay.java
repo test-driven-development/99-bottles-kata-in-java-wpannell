@@ -116,7 +116,7 @@ public class NinetyNineBottlesShouldPlay {
             capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
             quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
             action(numberOfBottles) + ", " +
-            quantity(predecessor()) + " " + container(99) + " of beer on the wall.\n";
+            quantity(predecessor(numberOfBottles)) + " " + container(99) + " of beer on the wall.\n";
 
       return
           capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
