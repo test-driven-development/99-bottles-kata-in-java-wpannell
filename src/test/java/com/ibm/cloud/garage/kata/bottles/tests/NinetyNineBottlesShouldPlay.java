@@ -114,13 +114,13 @@ public class NinetyNineBottlesShouldPlay {
       if(numberOfBottles == 0)
         return
             capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
-            ("no more") + " bottles of beer.\n" +
+            quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
             "Go to the store and buy some more, " +
             (99) + " bottles of beer on the wall.\n";
 
       return
           capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
-          numberOfBottles + " " + container(numberOfBottles) + " of beer.\n" +
+          quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
           "Take " + pronoun(numberOfBottles) + " down and pass it around, " +
           quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
     }
