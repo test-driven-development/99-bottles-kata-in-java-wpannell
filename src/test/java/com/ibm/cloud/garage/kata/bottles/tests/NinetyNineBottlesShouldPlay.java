@@ -130,7 +130,7 @@ public class NinetyNineBottlesShouldPlay {
             numberOfBottles + " bottles of beer on the wall, " +
             numberOfBottles + " bottles of beer.\n" +
             "Take one down and pass it around, " +
-            (numberOfBottles - 1) + " bottle of beer on the wall.\n";
+            (numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
 
       return
           numberOfBottles + " bottles of beer on the wall, " +
