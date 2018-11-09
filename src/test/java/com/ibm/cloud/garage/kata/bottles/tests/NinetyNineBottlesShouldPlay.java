@@ -116,13 +116,17 @@ public class NinetyNineBottlesShouldPlay {
             capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
             quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
             action(numberOfBottles) + ", " +
-            quantity(99) + " " + container(99) + " of beer on the wall.\n";
+            quantity(predecessor()) + " " + container(99) + " of beer on the wall.\n";
 
       return
           capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
           quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
           action(numberOfBottles) + ", " +
           quantity(numberOfBottles - 1) + " " + container(numberOfBottles - 1) + " of beer on the wall.\n";
+    }
+
+    private int predecessor() {
+      return 99;
     }
 
     private String action() {
