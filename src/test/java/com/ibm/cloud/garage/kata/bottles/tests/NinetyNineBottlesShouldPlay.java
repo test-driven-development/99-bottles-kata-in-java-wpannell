@@ -110,7 +110,7 @@ public class NinetyNineBottlesShouldPlay {
   }
 
   private class Bottles {
-    String verse(int numberOfBottles) {
+    public String verse(int numberOfBottles) {
       return
           capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
           quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
@@ -118,14 +118,14 @@ public class NinetyNineBottlesShouldPlay {
           quantity(predecessor(numberOfBottles)) + " " + container(predecessor(numberOfBottles)) + " of beer on the wall.\n";
     }
 
-    String verses(int start, int end) {
+    public String verses(int start, int end) {
       return IntStream.rangeClosed(end, start)
       .map(countDownFromTo(start, end))
       .mapToObj(this::verse)
       .collect(Collectors.joining("\n"));
     }
 
-    String song() { return verses(99, 0); }
+    public String song() { return verses(99, 0); }
 
     private String action(int numberOfBottles) {
       if(numberOfBottles == 0) return "Go to the store and buy some more";
