@@ -6,10 +6,11 @@ import java.util.stream.IntStream;
 
 public class Bottles {
   public String verse(int numberOfBottles) {
+    BottleNumber bottleNumber = new BottleNumber(numberOfBottles);
     return
-        capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
-        quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
-        action(numberOfBottles) + ", " +
+        capitalize(bottleNumber.quantity()) + " " + bottleNumber.container() + " of beer on the wall, " +
+        bottleNumber.quantity() + " " + bottleNumber.container() + " of beer.\n" +
+        bottleNumber.action() + ", " +
         quantity(predecessor(numberOfBottles)) + " " + container(predecessor(numberOfBottles)) + " of beer on the wall.\n";
   }
 
