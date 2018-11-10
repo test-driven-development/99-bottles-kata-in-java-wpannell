@@ -118,9 +118,14 @@ public class NinetyNineBottlesShouldPlay {
           quantity(predecessor(numberOfBottles)) + " " + container(predecessor(numberOfBottles)) + " of beer on the wall.\n";
     }
 
-    private int predecessor(int numberOfBottles) {
-      return ((numberOfBottles % -100) + 99) % 100;
+    String verses(int start, int end) {
+      return IntStream.rangeClosed(end, start)
+      .map(countDownFromTo(start, end))
+      .mapToObj(this::verse)
+      .collect(Collectors.joining("\n"));
     }
+
+    String song() { return verses(99, 0); }
 
     private String action(int numberOfBottles) {
       if(numberOfBottles == 0) return "Go to the store and buy some more";
@@ -131,9 +136,17 @@ public class NinetyNineBottlesShouldPlay {
       return word.toUpperCase().charAt(0) + word.substring(1);
     }
 
-    private String quantity(int numberOfBottles) {
-      if(numberOfBottles == 0) return "no more";
-      return String.valueOf(numberOfBottles);
+    private String container(int numberOfBottles) {
+      if(numberOfBottles == 1) return "bottle";
+      return "bottles";
+    }
+
+    private IntUnaryOperator countDownFromTo(int from, int to) {
+      return j -> to - j + from;
+    }
+
+    private int predecessor(int numberOfBottles) {
+      return ((numberOfBottles % -100) + 99) % 100;
     }
 
     private String pronoun(int numberOfBottles) {
@@ -141,22 +154,9 @@ public class NinetyNineBottlesShouldPlay {
       return "one";
     }
 
-    private String container(int numberOfBottles) {
-      if(numberOfBottles == 1) return "bottle";
-      return "bottles";
-    }
-
-    String verses(int start, int end) {
-      return IntStream.rangeClosed(end, start)
-      .map(countDownFromTo(start, end))
-      .mapToObj(this::verse)
-      .collect(Collectors.joining("\n"));
-    }
-
-    String song() { return verses(99, 0); }
-
-    private IntUnaryOperator countDownFromTo(int from, int to) {
-      return j -> to - j + from;
+    private String quantity(int numberOfBottles) {
+      if(numberOfBottles == 0) return "no more";
+      return String.valueOf(numberOfBottles);
     }
   }
 }
