@@ -22,22 +22,22 @@ public class Bottles {
 
   public String song() { return verses(99, 0); }
 
+  private String capitalize(String word) {
+    return word.toUpperCase().charAt(0) + word.substring(1);
+  }
+
+  private IntUnaryOperator countDownFromTo(int from, int to) {
+    return j -> to - j + from;
+  }
+
   private String action(int numberOfBottles) {
     if(numberOfBottles == 0) return "Go to the store and buy some more";
     return "Take " + pronoun(numberOfBottles) + " down and pass it around";
   }
 
-  private String capitalize(String word) {
-    return word.toUpperCase().charAt(0) + word.substring(1);
-  }
-
   private String container(int numberOfBottles) {
     if(numberOfBottles == 1) return "bottle";
     return "bottles";
-  }
-
-  private IntUnaryOperator countDownFromTo(int from, int to) {
-    return j -> to - j + from;
   }
 
   private int predecessor(int numberOfBottles) {
