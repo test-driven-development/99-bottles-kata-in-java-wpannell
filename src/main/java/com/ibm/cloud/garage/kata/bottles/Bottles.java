@@ -31,54 +31,52 @@ public class Bottles {
   }
 
   private String action(int numberOfBottles) {
-    if(numberOfBottles == 0) return "Go to the store and buy some more";
-    return "Take " + pronoun(numberOfBottles) + " down and pass it around";
+    return new BottleNumber(numberOfBottles).action();
   }
 
   private String container(int numberOfBottles) {
-    if(numberOfBottles == 1) return "bottle";
-    return "bottles";
+    return new BottleNumber(numberOfBottles).container();
   }
 
   private int predecessor(int numberOfBottles) {
-    return ((numberOfBottles % -100) + 99) % 100;
+    return new BottleNumber(numberOfBottles).predecessor();
   }
 
   private String pronoun(int numberOfBottles) {
-    if(numberOfBottles == 1) return "it";
-    return "one";
+    return new BottleNumber(numberOfBottles).pronoun();
   }
 
   private String quantity(int numberOfBottles) {
-    if(numberOfBottles == 0) return "no more";
-    return String.valueOf(numberOfBottles);
+    return new BottleNumber(numberOfBottles).quantity();
   }
 
   public class BottleNumber {
-    public BottleNumber() { }
+    private final int number;
 
-    private String action(int numberOfBottles) {
-      if(numberOfBottles == 0) { return "Go to the store and buy some more"; }
-      return "Take " + pronoun(numberOfBottles) + " down and pass it around";
+    public BottleNumber(int number) { this.number = number;}
+
+    private String action() {
+      if(number == 0) { return "Go to the store and buy some more"; }
+      return "Take " + pronoun() + " down and pass it around";
     }
 
-    private String container(int numberOfBottles) {
-      if(numberOfBottles == 1) { return "bottle"; }
+    private String container() {
+      if(number == 1) { return "bottle"; }
       return "bottles";
     }
 
-    private int predecessor(int numberOfBottles) {
-      return ((numberOfBottles % -100) + 99) % 100;
+    private int predecessor() {
+      return ((number % -100) + 99) % 100;
     }
 
-    private String pronoun(int numberOfBottles) {
-      if(numberOfBottles == 1) { return "it"; }
+    private String pronoun() {
+      if(number == 1) { return "it"; }
       return "one";
     }
 
-    private String quantity(int numberOfBottles) {
-      if(numberOfBottles == 0) { return "no more"; }
-      return String.valueOf(numberOfBottles);
+    private String quantity() {
+      if(number == 0) { return "no more"; }
+      return String.valueOf(number);
     }
   }
 }
