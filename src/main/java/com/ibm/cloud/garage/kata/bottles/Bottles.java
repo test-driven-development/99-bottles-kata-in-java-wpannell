@@ -53,4 +53,32 @@ public class Bottles {
     if(numberOfBottles == 0) return "no more";
     return String.valueOf(numberOfBottles);
   }
+
+  public class BottleNumber {
+    public BottleNumber() { }
+
+    private String action(int numberOfBottles) {
+      if(numberOfBottles == 0) { return "Go to the store and buy some more"; }
+      return "Take " + pronoun(numberOfBottles) + " down and pass it around";
+    }
+
+    private String container(int numberOfBottles) {
+      if(numberOfBottles == 1) { return "bottle"; }
+      return "bottles";
+    }
+
+    private int predecessor(int numberOfBottles) {
+      return ((numberOfBottles % -100) + 99) % 100;
+    }
+
+    private String pronoun(int numberOfBottles) {
+      if(numberOfBottles == 1) { return "it"; }
+      return "one";
+    }
+
+    private String quantity(int numberOfBottles) {
+      if(numberOfBottles == 0) { return "no more"; }
+      return String.valueOf(numberOfBottles);
+    }
+  }
 }
