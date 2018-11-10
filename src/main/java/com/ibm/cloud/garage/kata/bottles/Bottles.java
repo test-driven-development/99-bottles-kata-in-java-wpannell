@@ -7,11 +7,13 @@ import java.util.stream.IntStream;
 public class Bottles {
   public String verse(int numberOfBottles) {
     BottleNumber bottleNumber = new BottleNumber(numberOfBottles);
+    BottleNumber predecessorBottleNumber = new BottleNumber(bottleNumber.predecessor());
+    
     return
         capitalize(bottleNumber.quantity()) + " " + bottleNumber.container() + " of beer on the wall, " +
         bottleNumber.quantity() + " " + bottleNumber.container() + " of beer.\n" +
         bottleNumber.action() + ", " +
-        quantity(predecessor(numberOfBottles)) + " " + container(predecessor(numberOfBottles)) + " of beer on the wall.\n";
+        predecessorBottleNumber.quantity() + " " + predecessorBottleNumber.container() + " of beer on the wall.\n";
   }
 
   public String verses(int start, int end) {
