@@ -111,13 +111,6 @@ public class NinetyNineBottlesShouldPlay {
 
   private class Bottles {
     String verse(int numberOfBottles) {
-      if(numberOfBottles == 0)
-        return
-            capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
-            quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
-            action(numberOfBottles) + ", " +
-            quantity(predecessor(numberOfBottles)) + " " + container(predecessor(numberOfBottles)) + " of beer on the wall.\n";
-
       return
           capitalize(quantity(numberOfBottles)) + " " + container(numberOfBottles) + " of beer on the wall, " +
           quantity(numberOfBottles) + " " + container(numberOfBottles) + " of beer.\n" +
@@ -127,10 +120,6 @@ public class NinetyNineBottlesShouldPlay {
 
     private int predecessor(int numberOfBottles) {
       return ((numberOfBottles % -100) + 99) % 100;
-    }
-
-    private String action() {
-      return action(0);
     }
 
     private String action(int numberOfBottles) {
