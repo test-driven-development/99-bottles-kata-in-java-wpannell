@@ -47,32 +47,20 @@ public class Bottles {
       return "Take " + pronoun() + " down and pass it around";
     }
 
-    protected String container() {
-      return "bottles";
-    }
+    protected String container() { return "bottles"; }
 
-    private int predecessor() {
-      return ((number % -100) + 99) % 100;
-    }
+    private int predecessor() { return ((number % -100) + 99) % 100; }
 
-    protected String pronoun() {
-      return "one";
-    }
+    protected String pronoun() { return "one"; }
 
-    protected String quantity() {
-      return String.valueOf(number);
-    }
+    protected String quantity() { return String.valueOf(number); }
 
     @Override
-    public String toString() {
-      return quantity() + " " + container();
-    }
+    public String toString() { return quantity() + " " + container(); }
   }
 
   public class Bottle0 extends BottleNumber {
-    Bottle0(int number) {
-      super(number);
-    }
+    Bottle0(int number) { super(number); }
 
     @Override
     protected String quantity() { return "no more"; }
@@ -82,9 +70,7 @@ public class Bottles {
   }
 
   public class Bottle1 extends BottleNumber {
-    Bottle1(int number) {
-      super(number);
-    }
+    Bottle1(int number) { super(number); }
 
     @Override
     protected String container() { return "bottle"; }
