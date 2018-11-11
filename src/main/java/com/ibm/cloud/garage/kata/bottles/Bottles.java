@@ -46,7 +46,7 @@ public class Bottles {
       return "Take " + pronoun() + " down and pass it around";
     }
 
-    private String container() {
+    protected String container() {
       if(number == 1) { return "bottle"; }
       return "bottles";
     }
@@ -55,7 +55,7 @@ public class Bottles {
       return ((number % -100) + 99) % 100;
     }
 
-    private String pronoun() {
+    protected String pronoun() {
       if(number == 1) { return "it"; }
       return "one";
     }
