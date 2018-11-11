@@ -10,10 +10,14 @@ public class Bottles {
     BottleNumber predecessorBottleNumber = new BottleNumber(bottleNumber.predecessor());
     
     return
-        capitalize(bottleNumber.quantity()) + " " + bottleNumber.container() + " of beer on the wall, " +
+        capitalize(bottleNumber.toString()) + " of beer on the wall, " +
+
         bottleNumber.quantity() + " " + bottleNumber.container() + " of beer.\n" +
+
         bottleNumber.action() + ", " +
-        predecessorBottleNumber.quantity() + " " + predecessorBottleNumber.container() + " of beer on the wall.\n";
+
+        predecessorBottleNumber.quantity() + " " +
+            predecessorBottleNumber.container() + " of beer on the wall.\n";
   }
 
   public String verses(int start, int end) {
@@ -80,6 +84,11 @@ public class Bottles {
     private String quantity() {
       if(number == 0) { return "no more"; }
       return String.valueOf(number);
+    }
+
+    @Override
+    public String toString() {
+      return quantity() + " " + container();
     }
   }
 }
