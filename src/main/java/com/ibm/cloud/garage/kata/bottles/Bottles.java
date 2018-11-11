@@ -33,30 +33,9 @@ public class Bottles {
     return j -> to - j + from;
   }
 
-  private String action(int numberOfBottles) {
-    return new BottleNumber(numberOfBottles).action();
-  }
-
-  private String container(int numberOfBottles) {
-    return new BottleNumber(numberOfBottles).container();
-  }
-
-  private int predecessor(int numberOfBottles) {
-    return new BottleNumber(numberOfBottles).predecessor();
-  }
-
-  private String pronoun(int numberOfBottles) {
-    return new BottleNumber(numberOfBottles).pronoun();
-  }
-
-  private String quantity(int numberOfBottles) {
-    return new BottleNumber(numberOfBottles).quantity();
-  }
-
   public class BottleNumber {
     private final int number;
-
-    public BottleNumber(int number) { this.number = number;}
+    BottleNumber(int number) { this.number = number;}
 
     private String action() {
       if(number == 0) { return "Go to the store and buy some more"; }
