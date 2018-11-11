@@ -43,7 +43,6 @@ public class Bottles {
     BottleNumber(int number) { this.number = number;}
 
     protected String action() {
-      if(number == 0) { return "Go to the store and buy some more"; }
       return "Take " + pronoun() + " down and pass it around";
     }
 
@@ -62,7 +61,6 @@ public class Bottles {
     }
 
     protected String quantity() {
-      if(number == 0) { return "no more"; }
       return String.valueOf(number);
     }
 
