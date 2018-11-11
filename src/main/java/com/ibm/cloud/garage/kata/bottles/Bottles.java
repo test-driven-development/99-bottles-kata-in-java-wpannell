@@ -76,13 +76,21 @@ public class Bottles {
     }
 
     @Override
-    protected String quantity() {
-      return "no more";
+    protected String quantity() { return "no more"; }
+
+    @Override
+    protected String action() { return "Go to the store and buy some more"; }
+  }
+
+  public class Bottle1 extends BottleNumber {
+    Bottle1(int number) {
+      super(number);
     }
 
     @Override
-    protected String action() {
-      return "Go to the store and buy some more";
-    }
+    protected String container() { return "bottle"; }
+
+    @Override
+    protected String pronoun() { return "it"; }
   }
 }
