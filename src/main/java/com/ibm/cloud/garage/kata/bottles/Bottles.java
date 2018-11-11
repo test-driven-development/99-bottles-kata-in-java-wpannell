@@ -13,9 +13,7 @@ public class Bottles {
         capitalize(bottleNumber.toString()) + " of beer on the wall, " +
         bottleNumber.toString() + " of beer.\n" +
         bottleNumber.action() + ", " +
-
-        predecessorBottleNumber.quantity() + " " +
-            predecessorBottleNumber.container() + " of beer on the wall.\n";
+        predecessorBottleNumber.toString() + " of beer on the wall.\n";
   }
 
   public String verses(int start, int end) {
