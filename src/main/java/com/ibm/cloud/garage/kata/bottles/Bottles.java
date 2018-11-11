@@ -10,8 +10,8 @@ public class Bottles {
   }
 
   public String verse(int numberOfBottles) {
-    BottleNumber bottleNumber = new BottleNumber(numberOfBottles);
-    BottleNumber predecessorBottleNumber = new BottleNumber(bottleNumber.predecessor());
+    BottleNumber bottleNumber = makeBottleNumber(numberOfBottles);
+    BottleNumber predecessorBottleNumber = makeBottleNumber(bottleNumber.predecessor());
     
     return
         capitalize(bottleNumber.toString() + " of beer on the wall, ") +
