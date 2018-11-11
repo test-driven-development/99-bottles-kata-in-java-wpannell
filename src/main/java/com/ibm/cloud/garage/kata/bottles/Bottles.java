@@ -6,6 +6,7 @@ import java.util.stream.IntStream;
 
 public class Bottles {
   public BottleNumber makeBottleNumber(int number) {
+    if(number == 0) return new Bottle0(number);
     return new BottleNumber(number);
   }
 
