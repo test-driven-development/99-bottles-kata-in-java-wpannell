@@ -66,4 +66,10 @@ public class Bottles {
       return quantity() + " " + container();
     }
   }
+
+  public class Bottle0 extends BottleNumber {
+    Bottle0(int number) {
+      super(number);
+    }
+  }
 }
