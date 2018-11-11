@@ -13,13 +13,12 @@ public class Bottles {
 
   public String verse(int numberOfBottles) {
     BottleNumber bottleNumber = makeBottleNumber(numberOfBottles);
-    BottleNumber predecessorBottleNumber = makeBottleNumber(bottleNumber.predecessor());
     
     return
         capitalize(bottleNumber.toString() + " of beer on the wall, ") +
         bottleNumber.toString() + " of beer.\n" +
         bottleNumber.action() + ", " +
-        predecessorBottleNumber.toString() + " of beer on the wall.\n";
+        bottleNumber.predecessor().toString() + " of beer on the wall.\n";
   }
 
   public String verses(int start, int end) {
@@ -49,7 +48,9 @@ public class Bottles {
 
     protected String container() { return "bottles"; }
 
-    private int predecessor() { return ((number % -100) + 99) % 100; }
+    private BottleNumber predecessor() {
+      return makeBottleNumber(((number % -100) + 99) % 100);
+    }
 
     protected String pronoun() { return "one"; }
 
