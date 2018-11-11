@@ -5,6 +5,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Bottles {
+  public BottleNumber makeBottleNumber(int number) {
+    return new BottleNumber(number);
+  }
+
   public String verse(int numberOfBottles) {
     BottleNumber bottleNumber = new BottleNumber(numberOfBottles);
     BottleNumber predecessorBottleNumber = new BottleNumber(bottleNumber.predecessor());
