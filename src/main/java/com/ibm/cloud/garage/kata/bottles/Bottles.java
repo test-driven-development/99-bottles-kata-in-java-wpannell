@@ -10,7 +10,7 @@ public class Bottles {
     BottleNumber predecessorBottleNumber = new BottleNumber(bottleNumber.predecessor());
     
     return
-        capitalize(bottleNumber.toString()) + " of beer on the wall, " +
+        capitalize(bottleNumber.toString() + " of beer on the wall, ") +
         bottleNumber.toString() + " of beer.\n" +
         bottleNumber.action() + ", " +
         predecessorBottleNumber.toString() + " of beer on the wall.\n";
