@@ -48,7 +48,6 @@ public class Bottles {
     }
 
     protected String container() {
-      if(number == 1) { return "bottle"; }
       return "bottles";
     }
 
@@ -57,7 +56,6 @@ public class Bottles {
     }
 
     protected String pronoun() {
-      if(number == 1) { return "it"; }
       return "one";
     }
 
