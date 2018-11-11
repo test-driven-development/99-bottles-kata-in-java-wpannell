@@ -41,7 +41,7 @@ public class Bottles {
     private final int number;
     BottleNumber(int number) { this.number = number;}
 
-    private String action() {
+    protected String action() {
       if(number == 0) { return "Go to the store and buy some more"; }
       return "Take " + pronoun() + " down and pass it around";
     }
@@ -79,6 +79,11 @@ public class Bottles {
     @Override
     protected String quantity() {
       return "no more";
+    }
+
+    @Override
+    protected String action() {
+      return "Go to the store and buy some more";
     }
   }
 }
