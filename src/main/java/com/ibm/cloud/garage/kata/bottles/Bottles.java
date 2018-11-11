@@ -56,7 +56,7 @@ public class Bottles {
       return "one";
     }
 
-    private String quantity() {
+    protected String quantity() {
       if(number == 0) { return "no more"; }
       return String.valueOf(number);
     }
@@ -70,6 +70,11 @@ public class Bottles {
   public class Bottle0 extends BottleNumber {
     Bottle0(int number) {
       super(number);
+    }
+
+    @Override
+    protected String quantity() {
+      return "no more";
     }
   }
 }
